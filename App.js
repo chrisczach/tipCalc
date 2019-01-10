@@ -1,24 +1,30 @@
 import React from 'react';
 import Hello from './Hello';
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View, TextInput } from 'react-native';
 
 export default class App extends React.Component {
   render() {
-
     return (
-      <View styles={styles.wrapper}>
-        <Hello/>
+      <View style={styles.container}>
+        <TextInput style={styles.input}></TextInput>
       </View>
-      );
-    
+    );
   }
 }
 
 const styles = StyleSheet.create({
-  wrapper: {
+  container: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center'
   },
+  input: {
+    width: '90%',
+    borderColor: '#333',
+    borderWidth: 1,
+    borderBottomWidth: 2,
+    padding: 20,
+    borderRadius: 5
+  }
 });
